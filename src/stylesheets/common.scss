@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+  @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;600;700;900&display=swap");
+  font-family: "Nunito", sans-serif;
+}
+html {
+  height: 100%;
+  width: 100%;
+}
+#root {
+  height: 100vh;
+}
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .friends-list-wrapper {
+    border: 1px solid #dbdbdb;
+    width: 350px;
+    height: 400px;
+    position: relative;
+
+    .text-field {
+      width: 100%;
+      border: none;
+      outline: none;
+      border-bottom: 1px solid gray;
+      padding: 8px 10px;
+    }
+  }
+}
+
+.search-header-wrapper {
+  width: 100%;
+  
+  .search-box {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #dbdbdb;
+    padding: 4px 10px;
+    input {
+      width: 100%;
+      outline: none;
+      border: none;
+      font-size: 1.2rem;
+    }
+  }
+  .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 10px;
+    background-color: #97739062;
+    .heading {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+  }
+}
+
+
+.friend-details-card{
+    display: flex;
+    justify-content: space-between;
+    padding:10px;
+    border-bottom: 1px solid #dbdbdb;
+    transition: width 600ms ease-out, height 600ms ease-out;
+    .text-wrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        .text-lg{
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+        .text-sm{
+            font-size: .8rem;
+            opacity: .6;
+        }
+    }
+    .img-wrapper{
+        display: flex;
+        .img-button{
+            cursor: pointer;
+            padding:0 8px;
+        }
+    }
+}
+
+.paging-bar{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    
+    text-align: center;
+    span{
+        margin:4px;
+        cursor: pointer;
+    }
+    .active-page{
+        color:gray;
+    }
+}
+
+
